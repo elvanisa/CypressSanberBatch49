@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="75.970" tests="8" failures="1">
+  <testsuite name="Root Suite" timestamp="2023-09-06T12:23:59" tests="0" file="cypress/e2e/4-webtesting/saucedemo.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="test saucedemo" timestamp="2023-09-06T12:23:59" tests="8" time="75.967" failures="1">
+    <testcase name="test saucedemo C3 multiple failed login" time="9.849" classname="C3 multiple failed login">
+    </testcase>
+    <testcase name="test saucedemo C17 success login with POM" time="2.502" classname="C17 success login with POM">
+    </testcase>
+    <testcase name="test saucedemo C18 success login with fixtures" time="1.407" classname="C18 success login with fixtures">
+    </testcase>
+    <testcase name="test saucedemo &quot;before each&quot; hook for &quot;C19 success login with custom command&quot;" time="0.000" classname="&quot;before each&quot; hook for &quot;C19 success login with custom command&quot;">
+      <failure message="Timed out after waiting `60000ms` for your remote page to load.
+
+Your page did not fire its `load` event within `60000ms`.
+
+You can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.
+
+Browsers will not fire the `load` event until all stylesheets and scripts are done downloading.
+
+When this `load` event occurs, Cypress will continue running commands.
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `test saucedemo`" type="CypressError"><![CDATA[CypressError: Timed out after waiting `60000ms` for your remote page to load.
+
+Your page did not fire its `load` event within `60000ms`.
+
+You can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.
+
+Browsers will not fire the `load` event until all stylesheets and scripts are done downloading.
+
+When this `load` event occurs, Cypress will continue running commands.
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `test saucedemo`
+    at timedOutWaitingForPageLoad (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:130001:64)
+    at <unknown> (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:130975:16)
+    at tryCatcher (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1807:23)
+    at <unknown> (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:4186:41)
+    at tryCatcher (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1807:23)
+    at Promise._settlePromiseFromHandler (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1519:31)
+    at Promise._settlePromise (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1576:18)
+    at Promise._settlePromise0 (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1621:10)
+    at Promise._settlePromises (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1697:18)
+    at _drainQueueStep (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:2407:12)
+    at _drainQueue (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:2400:9)
+    at Async._drainQueues (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:2416:5)
+    at Async.drainQueues (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:2286:14)
+From Your Spec Code:
+    at Context.eval (webpack://cypressbatch49/./cypress/e2e/4-webtesting/saucedemo.cy.js:6:7)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>
