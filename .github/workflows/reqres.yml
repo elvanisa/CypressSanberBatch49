@@ -15,5 +15,5 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           spec: |
-          cypress/e2e/4-webtesting/orangeHRM.cy.js
-          cypress/e2e/3-apitesting/reqres.cy.js
+            cypress/e2e/4-webtesting/orangeHRM.cy.js
+            cypress/e2e/3-apitesting/reqres.cy.js
