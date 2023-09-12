@@ -1,14 +1,16 @@
-name: Cypress tests
+name: Orange Reqres
 on: push
 jobs:
   cypress-run:
-    name: Cypress run
+    name: Orange and Reqres
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Regression Orange
+      - name: Regression Orange and Reqres
         uses: cypress-io/github-action@v6
         with:
-          spec: cypress/e2e/4-webtesting/orangeHRM.cy.js
+          spec: |
+          cypress/e2e/4-webtesting/orangeHRM.cy.js
+          cypress/e2e/3-apitesting/reqres.cy.js

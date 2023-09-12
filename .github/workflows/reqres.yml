@@ -1,8 +1,11 @@
-name: Cypress tests
-on: push
+name: Reqres
+on: 
+  push:
+    paths:
+    - 'cypress/e2e/3-apitesting/reqres.cy.js'
 jobs:
   cypress-run:
-    name: Cypress run
+    name: Reqres
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
@@ -11,4 +14,6 @@ jobs:
       - name: Regression Reqres
         uses: cypress-io/github-action@v6
         with:
-          spec: cypress/e2e/3-apitesting/reqres.cy.js
+          spec: |
+          cypress/e2e/4-webtesting/orangeHRM.cy.js
+          cypress/e2e/3-apitesting/reqres.cy.js
