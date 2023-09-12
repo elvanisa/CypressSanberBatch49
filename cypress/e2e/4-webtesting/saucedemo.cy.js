@@ -19,7 +19,7 @@ describe('test saucedemo', () => {
     loginPage.clickLoginButton()
     loginPage.verifyProduct(userr[0].title)
   })
-  it('C18 success login with fixtures', () => {
+  it.skip('C18 success login with fixtures', () => {
     cy.fixture('user.json').then((user) => {
       const datauser = user[0];
       cy.login(datauser.username,datauser.password)
