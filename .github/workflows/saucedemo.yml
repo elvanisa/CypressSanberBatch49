@@ -1,5 +1,8 @@
 name: Cypress tests
-on: push
+on:
+  push:
+    paths:
+    - 'cypress/e2e/4-webtesting/saucedemo.cy.js'
 jobs:
   cypress-run:
     name: Cypress run

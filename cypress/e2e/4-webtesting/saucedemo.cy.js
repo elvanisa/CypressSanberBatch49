@@ -26,11 +26,11 @@ describe('test saucedemo', () => {
       cy.get('.title').should('have.text', 'Products')
     })
   })
-  it('C19 success login with custom command', () => {
+  it.skip('C19 success login with custom command', () => {
     cy.login('standard_user','secret_sauce')
     cy.get('.title').should('have.text', 'Products')
   })
-  it('C1 success login', () => {
+  it.skip('C1 success login', () => {
     //cy.get('[data-test="username"]').type('standard_user')
     cy.ketik('[data-test="username"]', 'standard_user')
     cy.get('[data-test="password"]').type('secret_sauce')

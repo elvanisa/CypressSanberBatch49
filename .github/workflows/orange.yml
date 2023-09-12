@@ -1,5 +1,8 @@
 name: Orange Reqres
-on: push
+on:
+  push:
+    paths:
+    - 'cypress/e2e/4-webtesting/orangeHRM.cy.js'
 jobs:
   cypress-run:
     name: Orange and Reqres
