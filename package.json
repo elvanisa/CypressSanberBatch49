@@ -1,0 +1,19 @@
+{
+  "name": "cypressbatch49",
+  "version": "1.0.0",
+  "description": "cypress automation test",
+  "main": "index.js",
+  "scripts": {
+    "webtest": "npx cypress run --browser chrome --spec 'cypress/e2e/4-webtesting/*'",
+    "orangeTest": "npx cypress run --spec 'cypress/e2e/4-webtesting/orangeHRM.cy.js'",
+    "reqresTest": "npx cypress run --spec 'cypress/e2e/3-apitesting/reqres.cy.js'",
+    "smokeTesting": "",
+    "regressionTesting": "",
+    "generateReport": "npx cypress run --browser chrome --spec 'cypress/e2e/4-webtesting/saucedemo.cy.js' --reporter junit --reporter-options 'mochaFile=reports/TEST-[hash].xml'"
+  },
+  "author": "elva",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.1.0"
+  }
+}

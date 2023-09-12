@@ -1,0 +1,20 @@
+{
+    "failed_login":[
+        {
+            "username": "wrong_password",
+            "password": "secret_sauce_wrong"
+        },
+        {
+            "username": "wrong_user",
+            "password": "secret_sauce"
+        },
+        {
+            "username": "locked_out_user",
+            "password": "secret_sauce"
+        },
+        {
+            "username": "x",
+            "password": "x"
+        }
+    ]
+}
