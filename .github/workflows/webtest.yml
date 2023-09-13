@@ -1,4 +1,4 @@
-name: Cypress tests
+name: Web tests
 on: push
 jobs:
   cypress-run:

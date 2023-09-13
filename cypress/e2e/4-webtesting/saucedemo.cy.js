@@ -2,10 +2,8 @@ import loginPage from '../../support/pageObject/userPage'
 const userr = require('../../fixtures/user.json')
 
 describe('test saucedemo', () => {
-  beforeEach(() => {
-    cy.visit('https://www.saucedemo.com/')
-  })
   it('C3 multiple failed login', () => {
+    cy.visit('https://www.saucedemo.com/')
     cy.fixture('fail-user.json').then((user) => {
       user.failed_login.forEach((datauser) => {
         cy.login(datauser.username,datauser.password)
@@ -14,23 +12,27 @@ describe('test saucedemo', () => {
     })
   })
   it('C17 success login with POM', () => {
+    cy.visit('https://www.saucedemo.com/')
     loginPage.inputUsername(userr[0].username)
     loginPage.inputPassword(userr[0].password)
     loginPage.clickLoginButton()
     loginPage.verifyProduct(userr[0].title)
   })
-  it.skip('C18 success login with fixtures', () => {
+  it('C18 success login with fixtures', () => {
+    cy.visit('https://www.saucedemo.com/')
     cy.fixture('user.json').then((user) => {
       const datauser = user[0];
       cy.login(datauser.username,datauser.password)
       cy.get('.title').should('have.text', 'Products')
     })
   })
-  it.skip('C19 success login with custom command', () => {
+  it('C19 success login with custom command', () => {
+    cy.visit('https://www.saucedemo.com/')
     cy.login('standard_user','secret_sauce')
     cy.get('.title').should('have.text', 'Products')
   })
-  it.skip('C1 success login', () => {
+  it('C1 success login', () => {
+    cy.visit('https://www.saucedemo.com/')
     //cy.get('[data-test="username"]').type('standard_user')
     cy.ketik('[data-test="username"]', 'standard_user')
     cy.get('[data-test="password"]').type('secret_sauce')
@@ -39,6 +41,7 @@ describe('test saucedemo', () => {
     cy.get('.title').should('have.text', 'Products')
   })
   it('C2 failed login - wrong credentials', () => {
+    cy.visit('https://www.saucedemo.com/')
     cy.get('[data-test="username"]').should('be.visible').type('salah user')
     cy.get('[data-test="password"]').should('be.visible').type('secret_sauce')
     cy.get('[data-test="login-button"]').click()
@@ -46,13 +49,15 @@ describe('test saucedemo', () => {
     cy.verifyContain('[data-test="error"]','do not match')
   })
   it('C4 failed login - user locked out', () => {
+    cy.visit('https://www.saucedemo.com/')
     cy.get('[data-test="username"]').should('be.visible').type('locked_out_user')
     cy.get('[data-test="password"]').should('be.visible').type('secret_sauce')
     cy.get('[data-test="login-button"]').click()
     cy.get('[data-test="error"]').should('contain.text', 'locked out')
   })
   //baru
-  it.skip('failed login - empty username', () => {
+  it('failed login - empty username', () => {
+    cy.visit('https://www.saucedemo.com/')
     cy.get('[data-test="password"]').type('secret_sauce')
     cy.get('[data-test="login-button"]').click()
     cy.get('[data-test="error"]').should('contain.text', 'Username is required')
